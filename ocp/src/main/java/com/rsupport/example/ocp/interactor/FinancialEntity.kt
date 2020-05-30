@@ -1,4 +1,7 @@
 package com.rsupport.example.ocp.interactor
 
-class FinancialEntity {
-}
+data class FinancialEntity(
+    val id: Int,
+    val name: String,
+    val money: Long
+)
