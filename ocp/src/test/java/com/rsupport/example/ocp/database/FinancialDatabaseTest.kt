@@ -11,6 +11,7 @@ class FinancialDatabaseTest{
     @Before
     fun setup() {
         financialDatabase = FinancialDatabase()
+        financialDatabase.clear()
     }
 
     @Test

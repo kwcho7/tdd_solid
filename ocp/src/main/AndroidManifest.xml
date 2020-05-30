@@ -1,2 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.rsupport.example.ocp" />
+    package="com.rsupport.example.ocp" >
+
+    <application
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        >
+        <activity android:name=".activities.web.WebViewActivity" />
+    </application>
+</manifest>

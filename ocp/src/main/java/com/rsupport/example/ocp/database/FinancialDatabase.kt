@@ -1,7 +1,13 @@
 package com.rsupport.example.ocp.database
 
 class FinancialDatabase {
-    private val companyMap = mutableMapOf<Int, Company>()
+    companion object{
+        private val companyMap = mutableMapOf<Int, Company>()
+    }
+
+    fun clear() {
+        companyMap.clear()
+    }
 
     fun insert(id: Int, name: String, money: Int): Boolean {
         if(hasCompany(id)) return false
