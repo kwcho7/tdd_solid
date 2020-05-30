@@ -1,4 +1,5 @@
 # Clean Architecture SOLID by TDD
+- 클린 아키텍쳐 책의 일부를 객체지향 설계원칙에 따라 테스트 주도 개발 방법론에 따라 예제를 작성한다.
 
 SRP - wait.
 =================
