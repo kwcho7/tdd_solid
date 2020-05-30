@@ -1,0 +1,7 @@
+rootProject.name='SOLIDExample'
+include ':app'
+include ':srp'
+include ':ocp'
+include ':lsp'
+include ':isp'
+include ':dip'
