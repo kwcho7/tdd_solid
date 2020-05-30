@@ -1,11 +1,12 @@
 package com.rsupport.example.ocp.printer.screen
 
+import com.rsupport.example.ocp.controller.FinancialReportPresenter
 import org.junit.Test
 import org.mockito.Mockito
 
 class ScreenPresenterTest{
     private val screenView = Mockito.mock(ScreenView::class.java)
-    private val financialReportPresenter = ScreenPresenter(screenView)
+    private val financialReportPresenter: FinancialReportPresenter = ScreenPresenter(screenView)
 
     @Test
     fun onReport() {
