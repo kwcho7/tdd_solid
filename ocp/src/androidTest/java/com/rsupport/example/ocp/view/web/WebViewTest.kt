@@ -4,8 +4,7 @@ import android.content.Context
 import androidx.test.core.app.ActivityScenario
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.assertion.ViewAssertions.matches
-import androidx.test.espresso.matcher.ViewMatchers.withId
-import androidx.test.espresso.matcher.ViewMatchers.withSubstring
+import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.platform.app.InstrumentationRegistry
 import com.rsupport.example.ocp.R
 import com.rsupport.example.ocp.activities.web.WebViewActivity
@@ -28,8 +27,9 @@ class WebViewTest{
 
     @Test
     fun financialDisplay() = runBlocking<Unit>{
-        ActivityScenario.launch(WebViewActivity::class.java)
         financialDatabase.insert(0, "Rsupport", 1000)
+
+        ActivityScenario.launch(WebViewActivity::class.java)
 
         onView(withId(R.id.financialTextView))
             .check(matches(withSubstring("Rsupport")))
