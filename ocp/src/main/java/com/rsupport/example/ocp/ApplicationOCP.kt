@@ -2,7 +2,7 @@ package com.rsupport.example.ocp
 
 import android.app.Application
 import androidx.annotation.Keep
-import di.financialModule
+import com.rsupport.example.ocp.di.financialModule
 import org.koin.core.context.startKoin
 
 @Keep

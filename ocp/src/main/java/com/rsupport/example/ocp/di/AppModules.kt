@@ -1,4 +1,4 @@
-package di
+package com.rsupport.example.ocp.di
 
 import com.rsupport.example.ocp.controller.FinancialReportController
 import com.rsupport.example.ocp.database.FinancialDataMapper

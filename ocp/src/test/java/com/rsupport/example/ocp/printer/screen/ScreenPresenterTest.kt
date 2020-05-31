@@ -2,7 +2,7 @@ package com.rsupport.example.ocp.printer.screen
 
 import com.rsupport.example.ocp.controller.FinancialReportPresenter
 import com.rsupport.example.ocp.database.FinancialDatabase
-import di.financialModule
+import com.rsupport.example.ocp.di.financialModule
 import org.junit.After
 import org.junit.Before
 import org.junit.Test
