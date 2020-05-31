@@ -3,6 +3,7 @@
 
     <application
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:name=".ApplicationOCP"
         >
         <activity android:name=".activities.web.WebViewActivity" />
     </application>
