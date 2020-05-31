@@ -2,6 +2,7 @@ package com.rsupport.example.srp.database
 
 import com.rsupport.example.srp.data.EmployeeData
 import org.hamcrest.CoreMatchers.`is`
+import org.hamcrest.CoreMatchers.nullValue
 import org.hamcrest.MatcherAssert.assertThat
 import org.junit.Before
 import org.junit.Test
@@ -18,6 +19,19 @@ class EmployeeDatabaseTest{
     fun getAll() {
         val employeeDataList = employeeDatabase.findAll()
         assertThat("데이터가 없어서 실패", employeeDataList.size, `is`(0))
+    }
+
+    @Test
+    fun find() {
+        employeeDatabase.insert(0)
+        val employeeData = employeeDatabase.find(0)
+        assertThat("데이터가 없어서 실패", employeeData?.id, `is`(0))
+    }
+
+    @Test
+    fun findNotFound() {
+        val employeeData = employeeDatabase.find(0)
+        assertThat("데이터가 없어서 실패", employeeData, nullValue())
     }
 
     @Test

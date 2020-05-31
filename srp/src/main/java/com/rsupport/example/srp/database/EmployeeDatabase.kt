@@ -10,6 +10,10 @@ class EmployeeDatabase {
         return employeeMap.values.toList()
     }
 
+    fun find(id: Int): EmployeeData? {
+        return employeeMap[id]
+    }
+
     fun insert(id: Int): Boolean {
         if(employeeMap.containsKey(id)) return false
         employeeMap[id] = EmployeeData(id)
