@@ -10,7 +10,22 @@
 
 SRP - Single Responsibility Principle 
 =================
-* 모듈의 변경의 이유는 하나여야한다.
+* 모듈의 변경의 이유는 하나여야한다.   
+
+위반사례
+------------------
+![SRP Bad](https://github.com/kwcho7/tdd_solid/blob/master/srp/images/srp_bad.png?raw=true)
+
+* 한명의 Actor의 요청에의한 변경으로 다른 Actor가 사용하는 Method가 영향 받을 수 있다.
+* Employee Class 는 3가지의 변경 이유를 갖는다.   
+
+Facade 패턴을 이용한 해결 방법 
+-------------------
+![SRP Facade](https://github.com/kwcho7/tdd_solid/blob/master/srp/images/srp_facade.png?raw=true)
+
+* 분리된 Class 에 책임을 위임하여 변경요청에 대해 서로를 분리한다.
+* Facade 패턴을 이용하여 외부로부터 정보를 감춘다.
+
 
 
 OCP - Open Close Principle
