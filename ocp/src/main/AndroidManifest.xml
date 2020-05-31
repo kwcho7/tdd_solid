@@ -6,5 +6,6 @@
         android:name=".ApplicationOCP"
         >
         <activity android:name=".activities.web.WebViewActivity" />
+        <activity android:name=".activities.pdf.PDFViewActivity" />
     </application>
 </manifest>
