@@ -2,19 +2,33 @@ package com.rsupport.example.ocp.printer.screen
 
 import com.rsupport.example.ocp.controller.FinancialReportPresenter
 import com.rsupport.example.ocp.database.FinancialDatabase
+import di.financialModule
+import org.junit.After
 import org.junit.Before
 import org.junit.Test
+import org.koin.core.context.startKoin
+import org.koin.core.context.stopKoin
 import org.mockito.Mockito
 
 class ScreenPresenterTest{
     private val screenView = Mockito.mock(ScreenView::class.java)
-    private val financialReportPresenter: FinancialReportPresenter = ScreenPresenter(screenView)
+    private val financialReportPresenter: FinancialReportPresenter by lazy { ScreenPresenter(screenView) }
 
     private val financialDatabase = FinancialDatabase()
 
     @Before
     fun setup() {
+        startKoin {
+            modules(
+                financialModule
+            )
+        }
         financialDatabase.clear()
+    }
+
+    @After
+    fun tearDown() {
+        stopKoin()
     }
 
     @Test
