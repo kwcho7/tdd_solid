@@ -15,4 +15,14 @@ class Employee(private val id: Int = 0, private val employeeDatabase: EmployeeDa
             "$id is worked ${it.hours} hours"
         } ?: ""
     }
+
+    fun reportSave(): String {
+        return employeeDatabase.find(id)?.let {
+            """
+                id : ${it.id}
+                pay : ${it.pay}
+                hours : ${it.hours}
+            """.trimIndent()
+        } ?: ""
+    }
 }

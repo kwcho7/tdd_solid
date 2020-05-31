@@ -32,7 +32,16 @@ class EmployeeTest{
     fun reportHours() {
         val employee = Employee(employeeID, employeeDatabase)
         val report = employee.reportHours()
-        assertThat("pay 값이 달라서 실패", report, containsString("8"))
+        assertThat("hour 값이 달라서 실패", report, containsString("8"))
+    }
+
+    @Test
+    fun save() {
+        val employee = Employee(employeeID, employeeDatabase)
+        val savedReport = employee.reportSave()
+        assertThat("데이터가 달라서 실패", savedReport, containsString("0"))
+        assertThat("데이터가 달라서 실패", savedReport, containsString("1000"))
+        assertThat("데이터가 달라서 실패", savedReport, containsString("8"))
     }
 
 
