@@ -16,7 +16,7 @@ SRP - Single Responsibility Principle
 ------------------
 ![SRP Bad](https://github.com/kwcho7/tdd_solid/blob/master/srp/images/srp_bad.png?raw=true)
 
-* 한명의 Actor의 요청에의해 다른 Actor 가 사용하는 Method가 영향 받을 수 있다.
+* 한명의 Actor의 요청에의한 변경으로 다른 Actor가 사용하는 Method가 영향 받을 수 있다.
 
 
 OCP - Open Close Principle
