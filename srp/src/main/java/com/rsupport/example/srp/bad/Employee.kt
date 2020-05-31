@@ -9,4 +9,10 @@ class Employee(private val id: Int = 0, private val employeeDatabase: EmployeeDa
             it.pay * it.hours
         } ?: 0
     }
+
+    fun reportHours(): String {
+        return employeeDatabase.find(id)?.let {
+            "$id is worked ${it.hours} hours"
+        } ?: ""
+    }
 }
