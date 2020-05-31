@@ -8,9 +8,10 @@
 - Mockito
 - Espresso
 
-SRP 
+SRP - Single Responsibility Principle 
 =================
-TODO   
+* 모듈의 변경의 이유는 하나여야한다.
+
 
 OCP - Open Close Principle
 =================
