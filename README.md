@@ -10,7 +10,13 @@
 
 SRP - Single Responsibility Principle 
 =================
-* 모듈의 변경의 이유는 하나여야한다.
+* 모듈의 변경의 이유는 하나여야한다.   
+
+위반사례
+------------------
+![SRP Bad](https://github.com/kwcho7/tdd_solid/blob/master/srp/images/srp_bad.png?raw=true)
+
+* 한명의 Actor의 요청에의해 다른 Actor 가 사용하는 Method가 영향 받을 수 있다.
 
 
 OCP - Open Close Principle
