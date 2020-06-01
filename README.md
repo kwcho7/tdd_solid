@@ -40,7 +40,9 @@ OCP - Open Close Principle
 ![Financial](https://raw.githubusercontent.com/kwcho7/tdd_solid/master/ocp/images/financial.png)
 LSP- Liskov Substitution Principle
 ==========
-TODO   
+![License](https://github.com/kwcho7/tdd_solid/blob/master/lsp/images/lsp_license.png?raw=true)
+
+![Rectangle](https://github.com/kwcho7/tdd_solid/blob/master/lsp/images/lsp_rectangle.png?raw=true)
 
 ISP
 ==========
