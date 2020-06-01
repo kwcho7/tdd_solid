@@ -38,4 +38,13 @@ class EmployeeFacadeTest {
         val report = employee.reportHours()
         assertThat("hour 값이 달라서 실패", report, CoreMatchers.containsString("8"))
     }
+
+    @Test
+    fun save() {
+        val employee = EmployeeFacade(employeeID, employeeDatabase)
+        val savedReport = employee.reportSave()
+        assertThat("데이터가 달라서 실패", savedReport, CoreMatchers.containsString("0"))
+        assertThat("데이터가 달라서 실패", savedReport, CoreMatchers.containsString("1000"))
+        assertThat("데이터가 달라서 실패", savedReport, CoreMatchers.containsString("8"))
+    }
 }
