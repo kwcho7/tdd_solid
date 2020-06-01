@@ -38,7 +38,7 @@ OCP - Open Close Principle
 * 요구사항 : 웹으로 보여지던 출력물을 종이 프린터로도 출력 가능해야한다.   
 
 ![Financial](https://raw.githubusercontent.com/kwcho7/tdd_solid/master/ocp/images/financial.png)
-LSP
+LSP- Liskov Substitution Principle
 ==========
 TODO   
 
