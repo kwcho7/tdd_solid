@@ -14,19 +14,17 @@
 
 위반사례
 ------------------
-![SRP Bad](https://github.com/kwcho7/tdd_solid/blob/master/srp/images/srp_bad.png?raw=true)
-
 * 한명의 Actor의 요청에의한 변경으로 다른 Actor가 사용하는 Method가 영향 받을 수 있다.
 * Employee Class 는 3가지의 변경 이유를 갖는다.   
 
+![SRP Bad](https://github.com/kwcho7/tdd_solid/blob/master/srp/images/srp_bad.png?raw=true)
+
 Facade 패턴을 이용한 해결 방법 
 -------------------
-![SRP Facade](https://github.com/kwcho7/tdd_solid/blob/master/srp/images/srp_facade.png?raw=true)
-
 * 분리된 Class 에 책임을 위임하여 변경요청에 대해 서로를 분리한다.
 * Facade 패턴을 이용하여 외부로부터 정보를 감춘다.
 
-
+![SRP Facade](https://github.com/kwcho7/tdd_solid/blob/master/srp/images/srp_facade.png?raw=true)
 
 개방 폐쇠 원칙 OCP - Open Close Principle 
 =================
@@ -46,22 +44,32 @@ Facade 패턴을 이용한 해결 방법
 위반 사례
 ----------
 * 정사각형은 직사각형을 상속받았다.   
-정사각형은 넓이와 높이가 다를 수 있지만 정사각형은 넓이와 높이가같다.   
-직사각형을 사용하는 사용자는 정사각형 대신 직사각형을 사용할 수 없다.   
+* 정사각형은 넓이와 높이가 다를 수 있지만 정사각형은 넓이와 높이가같다.   
+* 직사각형을 사용하는 사용자는 정사각형 대신 직사각형을 사용할 수 없다.   
 
 ![Rectangle](https://github.com/kwcho7/tdd_solid/blob/master/lsp/images/lsp_rectangle.png?raw=true)
 
 인터페이스를 이용한 해결 
 -----------
+* Billing은 License 인퍼페이스를 참조하여 사용할때 PersonalLicense 나 BusinessLicense 둘중 어떤것을 사용하더라도 Billing 의 행동은 변경되지 않는다.
+
 ![License](https://github.com/kwcho7/tdd_solid/blob/master/lsp/images/lsp_license.png?raw=true)   
 
-* Billing은 License 인퍼페이스를 참조하여 사용할때 PersonalLicense 나 BusinessLicense 둘중 어떤것을 사용하더라도 Billing 의 행동은 변경되지 않는다.
    
 
 인터페이스 분리 원칙 ISP - Interface Segregation Principle
 ==========
+* 다수의 Client 가 특정 Class의 각각의 Method를 사용한다면 각각 Method 는 분리되어야한다.
+
+위반사례
+----------
+* User1, User2, User3 은 OPS Class 에 각각 ops1, ops2, ops3을 사용한다.
+* User1이 사용하는 ops1 method 가 변경되면 전혀 사용하지 않는 ops2, ops3이 같이 변경될 수 있으므로 이를 분리해야한다.
+   
 ![isp_bad](https://github.com/kwcho7/tdd_solid/blob/master/isp/images/isp_bad.png?raw=true)
 
+인터페이스 분리를 이용한 해결방법 
+-----------
 ![isp](https://github.com/kwcho7/tdd_solid/blob/master/isp/images/isp.png?raw=true)
 
 
