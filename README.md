@@ -8,7 +8,7 @@
 - Mockito
 - Espresso
 
-SRP - Single Responsibility Principle 단일 책임 원칙
+단일 책임 원칙 SRP - Single Responsibility Principle 
 =================
 * 모듈의 변경의 이유는 하나여야한다.   
 
@@ -28,7 +28,7 @@ Facade 패턴을 이용한 해결 방법
 
 
 
-OCP - Open Close Principle 개방 폐쇠 원칙
+개방 폐쇠 원칙 OCP - Open Close Principle 
 =================
 * 확장에는 열려있어야하고, 변경에는 닫혀있어야한다(1988년 버트란트 마이어)
 * '행위는 확장할 수 있어야하지만 이때 변경에는 닫혀있어야한다'는 뜻이다.   
@@ -52,7 +52,7 @@ LSP- Liskov Substitution Principle 리스코브 치환원칙
 
 ![Rectangle](https://github.com/kwcho7/tdd_solid/blob/master/lsp/images/lsp_rectangle.png?raw=true)
 
-ISP - Interface Segregation 인터페이스 분리원칙
+인터페이스 분리 원칙 ISP - Interface Segregation 
 ==========
 TODO   
 
