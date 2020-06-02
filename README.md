@@ -42,8 +42,6 @@ Facade 패턴을 이용한 해결 방법
 ==========
 * License 타입을 구현한 PersnalLicense와 BusinessLicense 가 있고 License 타입을 정의한 프로그램 Billing 에서 PersnalLicense 자리에 BusinessLicense 로 대체하더라도 Bulling 의 행위가 변하지 않아야한다.    
 즉, 같은 부모를 상속, 구현한 객체는 다른 객체로 대체하더라도 부모를 사용하는 객체의 행위는 변하지 않아야한다.
-![License](https://github.com/kwcho7/tdd_solid/blob/master/lsp/images/lsp_license.png?raw=true)   
-   
 위반 사례
 ----------
 * 정사각형은 직사각형을 상속받았다.   
@@ -52,9 +50,20 @@ Facade 패턴을 이용한 해결 방법
 
 ![Rectangle](https://github.com/kwcho7/tdd_solid/blob/master/lsp/images/lsp_rectangle.png?raw=true)
 
+인터페이스를 이용한 해결 
+-----------
+![License](https://github.com/kwcho7/tdd_solid/blob/master/lsp/images/lsp_license.png?raw=true)   
+
+* Billing은 License 인퍼페이스를 참조하여 사용할때 PersonalLicense 나 BusinessLicense 둘중 어떤것을 사용하더라도 Billing 의 행동은 변경되지 않는다.
+   
+
 인터페이스 분리 원칙 ISP - Interface Segregation Principle
 ==========
-TODO   
+![isp_bad](https://github.com/kwcho7/tdd_solid/blob/master/isp/images/isp_bad.png?raw=true)
+
+![isp](https://github.com/kwcho7/tdd_solid/blob/master/isp/images/isp.png?raw=true)
+
+
 
 의존 역전 원칙 DIP - Dependency Inversion Principle
 ===========
