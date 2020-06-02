@@ -12,11 +12,15 @@ open class Rectangle {
         return width
     }
 
-    fun setWidth(width: Int) {
+    open fun setWidth(width: Int) {
         this.width = width
     }
 
-    fun setHeight(height: Int) {
+    open fun setHeight(height: Int) {
         this.height = height
+    }
+
+    open fun getArea(): Int {
+        return getWidth() * getHeight()
     }
 }

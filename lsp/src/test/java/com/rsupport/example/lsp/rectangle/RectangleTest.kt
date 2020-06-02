@@ -21,23 +21,25 @@ class RectangleTest{
     }
 
     @Test
-    fun widthChange() {
+    fun change() {
         val rectangle = createRectangle().apply {
             setWidth(100)
             setHeight(200)
         }
         val width = rectangle.getWidth()
+        val height = rectangle.getHeight()
         assertThat("설정 값과 달라서 실패", width, `is`(100))
+        assertThat("설정 값과 달라서 실패", height, `is`(200))
     }
 
     @Test
-    fun heightChange() {
+    fun area() {
         val rectangle = createRectangle().apply {
             setWidth(100)
             setHeight(200)
         }
-        val height = rectangle.getHeight()
-        assertThat("설정 값과 달라서 실패", height, `is`(200))
+
+        assertThat("설정 값과 달라서 실패", rectangle.getArea(), `is`(20000))
     }
 
     private fun createRectangle(height: Int = 0, width: Int = 0): Rectangle {
