@@ -64,12 +64,13 @@ Facade 패턴을 이용한 해결 방법
 위반사례
 ----------
 * User1, User2, User3 은 OPS Class 에 각각 ops1, ops2, ops3을 사용한다.
-* User1이 사용하는 ops1 method 가 변경되면 전혀 사용하지 않는 ops2, ops3이 같이 변경될 수 있으므로 이를 분리해야한다.
+* User1은 ops1만 사용하는데도 ops2, ops3 에대한 의존성을 갖게된다.
    
 ![isp_bad](https://github.com/kwcho7/tdd_solid/blob/master/isp/images/isp_bad.png?raw=true)
 
 인터페이스 분리를 이용한 해결방법 
 -----------
+* U1Ops, U2Ops, U3Ops 인터페이스를 이용하여 User1 은 U1Ops 의 ops1 method만 의존하여 사용하지 않는 method 에대한 의존성을 해결할 수 있다.
 ![isp](https://github.com/kwcho7/tdd_solid/blob/master/isp/images/isp.png?raw=true)
 
 
