@@ -38,7 +38,7 @@ Facade 패턴을 이용한 해결 방법
 * 요구사항 : 웹으로 보여지던 출력물을 종이 프린터로도 출력 가능해야한다.   
 
 ![Financial](https://raw.githubusercontent.com/kwcho7/tdd_solid/master/ocp/images/financial.png)
-LSP- Liskov Substitution Principle 리스코브 치환원칙
+리스코브 치환 원칙 LSP- Liskov Substitution Principle 
 ==========
 * License 타입을 구현한 PersnalLicense와 BusinessLicense 가 있고 License 타입을 정의한 프로그램 Billing 에서 PersnalLicense 자리에 BusinessLicense 로 대체하더라도 Bulling 의 행위가 변하지 않아야한다.    
 즉, 같은 부모를 상속, 구현한 객체는 다른 객체로 대체하더라도 부모를 사용하는 객체의 행위는 변하지 않아야한다.
@@ -52,11 +52,11 @@ LSP- Liskov Substitution Principle 리스코브 치환원칙
 
 ![Rectangle](https://github.com/kwcho7/tdd_solid/blob/master/lsp/images/lsp_rectangle.png?raw=true)
 
-인터페이스 분리 원칙 ISP - Interface Segregation 
+인터페이스 분리 원칙 ISP - Interface Segregation Principle
 ==========
 TODO   
 
-DIP
+의존 역전 원칙 DIP - Dependency Inversion Principle
 ===========
 TODO   
 
