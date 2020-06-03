@@ -2,14 +2,19 @@ package com.rsupport.example.isp.bad
 
 class Ops {
     fun op1(): String {
-        return "result of op1"
+        val opNumber = 1
+        return getResultOps(opNumber)
     }
 
     fun op2(): String {
-        return "result of op2"
+        val opNumber = 2
+        return getResultOps(opNumber)
     }
 
     fun op3(): String {
-        return "result of op3"
+        val opNumber = 3
+        return getResultOps(opNumber)
     }
+
+    private fun getResultOps(opNumber: Int) = "result of op$opNumber"
 }
