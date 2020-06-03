@@ -8,4 +8,8 @@ class Ops {
     fun op2(): String {
         return "result of op2"
     }
+
+    fun op3(): String {
+        return "result of op3"
+    }
 }
