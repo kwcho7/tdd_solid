@@ -14,19 +14,17 @@
 
 위반사례
 ------------------
-![SRP Bad](https://github.com/kwcho7/tdd_solid/blob/master/srp/images/srp_bad.png?raw=true)
-
 * 한명의 Actor의 요청에의한 변경으로 다른 Actor가 사용하는 Method가 영향 받을 수 있다.
 * Employee Class 는 3가지의 변경 이유를 갖는다.   
 
+![SRP Bad](https://github.com/kwcho7/tdd_solid/blob/master/srp/images/srp_bad.png?raw=true)
+
 Facade 패턴을 이용한 해결 방법 
 -------------------
-![SRP Facade](https://github.com/kwcho7/tdd_solid/blob/master/srp/images/srp_facade.png?raw=true)
-
 * 분리된 Class 에 책임을 위임하여 변경요청에 대해 서로를 분리한다.
 * Facade 패턴을 이용하여 외부로부터 정보를 감춘다.
 
-
+![SRP Facade](https://github.com/kwcho7/tdd_solid/blob/master/srp/images/srp_facade.png?raw=true)
 
 개방 폐쇠 원칙 OCP - Open Close Principle 
 =================
@@ -41,20 +39,41 @@ Facade 패턴을 이용한 해결 방법
 리스코브 치환 원칙 LSP- Liskov Substitution Principle 
 ==========
 * License 타입을 구현한 PersnalLicense와 BusinessLicense 가 있고 License 타입을 정의한 프로그램 Billing 에서 PersnalLicense 자리에 BusinessLicense 로 대체하더라도 Bulling 의 행위가 변하지 않아야한다.    
-즉, 같은 부모를 상속, 구현한 객체는 다른 객체로 대체하더라도 부모를 사용하는 객체의 행위는 변하지 않아야한다.
-![License](https://github.com/kwcho7/tdd_solid/blob/master/lsp/images/lsp_license.png?raw=true)   
-   
+즉, 같은 부모를 상속, 구현한 객체는 다른 객체로 대체하더라도 부모를 사용하는 객체의 행위는 변하지 않아야한다.   
+
 위반 사례
 ----------
 * 정사각형은 직사각형을 상속받았다.   
-정사각형은 넓이와 높이가 다를 수 있지만 정사각형은 넓이와 높이가같다.   
-직사각형을 사용하는 사용자는 정사각형 대신 직사각형을 사용할 수 없다.   
+* 정사각형은 넓이와 높이가 다를 수 있지만 정사각형은 넓이와 높이가같다.   
+* 직사각형을 사용하는 사용자는 정사각형 대신 직사각형을 사용할 수 없다.   
 
 ![Rectangle](https://github.com/kwcho7/tdd_solid/blob/master/lsp/images/lsp_rectangle.png?raw=true)
 
+인터페이스를 이용한 해결 
+-----------
+* Billing은 License 인퍼페이스를 참조하여 사용할때 PersonalLicense 나 BusinessLicense 둘중 어떤것을 사용하더라도 Billing 의 행동은 변경되지 않는다.
+
+![License](https://github.com/kwcho7/tdd_solid/blob/master/lsp/images/lsp_license.png?raw=true)   
+
+   
+
 인터페이스 분리 원칙 ISP - Interface Segregation Principle
 ==========
-TODO   
+* 다수의 Client 가 특정 Class의 각각의 Method를 사용한다면 각각 Method 는 분리되어야한다.
+
+위반사례
+----------
+* User1, User2, User3 은 OPS Class 에 각각 ops1, ops2, ops3을 사용한다.
+* User1은 ops1만 사용하는데도 ops2, ops3 에대한 의존성을 갖게된다.
+   
+![isp_bad](https://github.com/kwcho7/tdd_solid/blob/master/isp/images/isp_bad.png?raw=true)
+
+인터페이스 분리를 이용한 해결방법 
+-----------
+* U1Ops, U2Ops, U3Ops 인터페이스를 이용하여 User1 은 U1Ops 의 ops1 method만 의존하여 사용하지 않는 method 에대한 의존성을 해결할 수 있다.
+![isp](https://github.com/kwcho7/tdd_solid/blob/master/isp/images/isp.png?raw=true)
+
+
 
 의존 역전 원칙 DIP - Dependency Inversion Principle
 ===========
