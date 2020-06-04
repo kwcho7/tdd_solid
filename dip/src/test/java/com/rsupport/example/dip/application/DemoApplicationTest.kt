@@ -4,6 +4,7 @@ import com.nhaarman.mockitokotlin2.given
 import com.nhaarman.mockitokotlin2.mock
 import com.nhaarman.mockitokotlin2.verify
 import com.rsupport.example.dip.application.message.Message
+import com.rsupport.example.dip.service.NetworkServiceFactory
 import junit.framework.Assert.assertTrue
 import org.junit.Test
 
@@ -17,9 +18,7 @@ class DemoApplicationTest {
         given(serviceFactory.create()).willAnswer { service }
         given(service.write(message)).willAnswer { true }
 
-        val application = DemoApplication().apply {
-            this.setServiceFactory(serviceFactory)
-        }
+        val application = DemoApplication(NetworkServiceFactory())
         val sendResult = application.sendMessage(message)
 
         verify(service).write(message)
