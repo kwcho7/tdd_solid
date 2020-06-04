@@ -1,4 +1,4 @@
-package com.rsupport.example.isp.bad
+package com.rsupport.example.isp.split
 
 import org.hamcrest.CoreMatchers.`is`
 import org.junit.Assert.*
@@ -6,7 +6,7 @@ import org.junit.Test
 
 class User2Test{
 
-    private val ops = OpsImpl()
+    private val ops = Ops()
 
     @Test
     fun return_string_when_called_op1() {

@@ -6,7 +6,7 @@ import org.junit.Test
 
 class User3Test{
 
-    private val ops = Ops()
+    private val ops = OpsImpl()
 
     @Test
     fun return_value_when_called_op3() {
