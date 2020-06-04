@@ -76,7 +76,7 @@ Facade 패턴을 이용한 해결 방법
 
 
 
-의존 역전 원칙 DIP - Dependency Inversion Principle
+[의존 역전 원칙 DIP](https://github.com/kwcho7/tdd_solid/tree/master/dip) - Dependency Inversion Principle
 ===========
 * 추상화에 의존하고 구체에는 의존하지 않아야한다.
 * 안정화된 플렛폼이나 안정적이며 변경되지 않은 코드에 대해서는 예외로 둘 수 있다.
