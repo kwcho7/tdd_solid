@@ -7,8 +7,8 @@
 - Hamcrest
 - Mockito
 - Espresso
-
-[단일 책임 원칙 SRP - Single Responsibility Principle](https://github.com/kwcho7/tdd_solid/tree/master/srp)
+   
+[단일 책임 원칙 SRP](https://github.com/kwcho7/tdd_solid/tree/master/srp) - Single Responsibility Principle
 =================
 * 모듈의 변경의 이유는 하나여야한다.   
 
@@ -25,8 +25,8 @@ Facade 패턴을 이용한 해결 방법
 * Facade 패턴을 이용하여 외부로부터 정보를 감춘다.
 
 ![SRP Facade](https://github.com/kwcho7/tdd_solid/blob/master/srp/images/srp_facade.png?raw=true)
-
-개방 폐쇠 원칙 OCP - Open Close Principle 
+   
+[개방 폐쇠 원칙 OCP](https://github.com/kwcho7/tdd_solid/tree/master/ocp) - Open Close Principle
 =================
 * 확장에는 열려있어야하고, 변경에는 닫혀있어야한다(1988년 버트란트 마이어)
 * '행위는 확장할 수 있어야하지만 이때 변경에는 닫혀있어야한다'는 뜻이다.   
