@@ -58,7 +58,7 @@ Facade 패턴을 이용한 해결 방법
 
    
 
-인터페이스 분리 원칙 ISP - Interface Segregation Principle
+[인터페이스 분리 원칙 ISP](https://github.com/kwcho7/tdd_solid/tree/master/isp) - Interface Segregation Principle
 ==========
 * 다수의 Client 가 특정 Class의 각각의 Method를 사용한다면 각각 Method 는 분리되어야한다.
 
