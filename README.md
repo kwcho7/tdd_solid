@@ -8,7 +8,7 @@
 - Mockito
 - Espresso
 
-단일 책임 원칙 SRP - Single Responsibility Principle 
+[단일 책임 원칙 SRP - Single Responsibility Principle](https://github.com/kwcho7/tdd_solid/tree/master/srp)
 =================
 * 모듈의 변경의 이유는 하나여야한다.   
 
